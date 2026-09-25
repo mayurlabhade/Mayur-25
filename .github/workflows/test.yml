@@ -53,3 +53,4 @@ jobs:
     steps:
       - run: echo " Repo Name is  ${{ secrets.REPO_NAME }}"
       - run: echo " Environmnet secrets is ${{ secrets.ENVREPO}}"
+      - run: echo " cat ${{ secrets.GITHUB_TOKEN}} "
