@@ -52,4 +52,4 @@ jobs:
     environment: dev
     steps:
       - run: echo " Repo Name is  ${{ secrets.REPO_NAME }}"
-      - run: echo " Environmnet secrets is ${{ secrets.ENV_REPO}}"
+      - run: echo " Environmnet secrets is ${{ secrets.ENVREPO}}"
