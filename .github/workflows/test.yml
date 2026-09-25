@@ -31,5 +31,11 @@ jobs:
         run: echo "Dyn_name=MayurAshokLabhade" >> $GITHUB_ENV
       - run: echo "Name is ${{env.Dyn_name}}"
       
-      
+  Out:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: stps-otputs
+        id: w1
+        run: echo "out-name=Sakshi" >> $GITHUB_OUTPUT
+      -run: echo " out name is ${{steps.w1.outputs.out-name}}"
           
