@@ -8,7 +8,7 @@ jobs:
   Scan:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello From Bash Shell"
+      - run: exit 1
       - run: print ("Hello From Python")
         shell: python
       - uses: actions/setup-dotnet@v4
