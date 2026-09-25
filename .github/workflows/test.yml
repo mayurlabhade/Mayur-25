@@ -16,4 +16,5 @@ jobs:
     runs-on: ubuntu-24.04
     needs: Scan
     steps:
-      - run: echo "This Job is depends on Scan Job and is run on $(date)"
+      - name: Checking_Dependacy 
+        run: echo "This Job is depends on Scan Job and is run on $(date)"
