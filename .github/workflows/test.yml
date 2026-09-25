@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
 jobs:
-  test-job:
+  Scan:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello From Bash Shell"
@@ -12,3 +12,8 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "10.x"
+  Build:
+    runs-on: ubuntu-24.04
+    needs: Scan
+    steps:
+      - run: echo" This Job is depends on Scan Job"
