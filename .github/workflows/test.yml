@@ -50,7 +50,9 @@ jobs:
   Secrets:
     runs-on: ubuntu-latest
     environment: dev
+    env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - run: echo " Repo Name is  ${{ secrets.REPO_NAME }}"
       - run: echo " Environmnet secrets is ${{ secrets.ENVREPO}}"
-      - run: echo " cat ${{ secrets.GITHUB_TOKEN}} "
+      - run: echo " cat $GITHUB_TOKEN "
