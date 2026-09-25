@@ -1,10 +1,13 @@
 name: Testing
-
 on:
   workflow_dispatch:
-
 jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello"
+      - run: echo "Hello From Bash Shell"
+      - run: print ("Hello From Python")
+        shell: python
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.x"
