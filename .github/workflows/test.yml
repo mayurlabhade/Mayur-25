@@ -2,6 +2,8 @@ name: Testing
 on:
   push:
     branches: [main]
+env:
+  Workflow_Level: Workflow
 jobs:
   Scan:
     runs-on: ubuntu-latest
@@ -15,6 +17,14 @@ jobs:
   Build:
     runs-on: ubuntu-24.04
     needs: Scan
+    env:
+      Job_Level: Job
     steps:
-      - name: Checking_Dependacy 
-        run: echo "This Job is depends on Scan Job and is run on $(date)"
+      - name: Checking Env
+        env:
+          Step_Level: Step
+        run: |
+          echo "$Workflow_Level"
+          echo "$Job_Level"
+          echo "$Step_Level"
+          
