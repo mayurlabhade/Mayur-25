@@ -37,5 +37,5 @@ jobs:
       - name: stps-otputs
         id: w1
         run: echo "out-name=Sakshi" >> $GITHUB_OUTPUT
-      -run: echo " out name is ${{steps.w1.outputs.out-name}}"
+      - run: echo " out name is ${{steps.w1.outputs.out-name}}"
           
