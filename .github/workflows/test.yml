@@ -33,9 +33,17 @@ jobs:
       
   Out:
     runs-on: ubuntu-24.04
+    outputs:
+      Mayur: ${{steps.w1.outputs.out-name}}
     steps:
       - name: stps-otputs
         id: w1
         run: echo "out-name=Sakshi" >> $GITHUB_OUTPUT
-      - run: echo " out name is ${{steps.w1.outputs.out-name}}"
+
+  Use:
+      runs-on: ubuntu-24.04
+      needs:
+        - Out
+      steps:
+        - run: echo "${{needs.Out.outputs.Mayur}}"
           
