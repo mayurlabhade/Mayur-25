@@ -26,5 +26,5 @@ jobs:
         run: |
           echo "$Workflow_Level"
           echo "$Job_Level"
-          echo "$Step_Level"
+          echo "${{env.Step_Level}}"
           
