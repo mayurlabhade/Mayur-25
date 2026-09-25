@@ -47,3 +47,7 @@ jobs:
       steps:
         - run: echo "${{needs.Out.outputs.Mayur}}"
           
+  Secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{secrets.Repo_Name}}"
