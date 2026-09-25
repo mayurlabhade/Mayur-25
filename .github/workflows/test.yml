@@ -49,6 +49,7 @@ jobs:
           
   Secrets:
     runs-on: ubuntu-latest
+    environment: dev
     steps:
       - run: echo " Repo Name is  ${{ secrets.REPO_NAME }}"
       - run: echo " Environmnet secrets is ${{ secrets.ENV_REPO}}"
