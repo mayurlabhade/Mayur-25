@@ -50,4 +50,4 @@ jobs:
   Secrets:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{secrets.Repo_Name}}"
+      - run: echo "${{secrets.REPO_NAME}}"
