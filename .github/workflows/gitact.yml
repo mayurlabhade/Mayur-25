@@ -5,7 +5,10 @@ on:
 
 jobs:
   setup:
-    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        OS: [ubuntu-24.04 , ubuntu-latest]
+    runs-on: ${{matrix.OS}}
     env:
       node-version: "22.x"
       dotnet-version: "10.x"
