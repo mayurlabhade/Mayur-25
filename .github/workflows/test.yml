@@ -2,8 +2,8 @@ name: Testing
 on:
   push:
     branches: [main]
-permuissions:
-  content: read
+permissions:
+  contents: read
   issues: read
   id-token: write
 env:
@@ -12,7 +12,7 @@ jobs:
   Scan:
     runs-on: ubuntu-latest
     permissions:
-     content: write
+     contents: write
       
     steps:
       - run: echo "Hello"
