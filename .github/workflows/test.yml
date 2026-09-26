@@ -2,6 +2,9 @@ name: Testing
 on:
   push:
     branches: [main]
+concurrency: 
+  group: Production
+  cancel-in-group: true
 permissions:
   contents: read
   issues: read
