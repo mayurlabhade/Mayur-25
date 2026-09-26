@@ -34,6 +34,21 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: test-artifact
+          name: test-artifact-upload
           path: output.txt
-          retention-days: 30
+          retention-days: 100
+
+  Download:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: donload artifact
+        run: actions/download-artifact@v4
+        with:
+          name: test-artifact-download
+          path: /mayur
+    
+      - name: check file
+        run: cat /mayur/output.txt
+  
+  
+          
