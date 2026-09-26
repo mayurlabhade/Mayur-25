@@ -2,11 +2,18 @@ name: Testing
 on:
   push:
     branches: [main]
+permuissions:
+  content: read
+  issues: read
+  id-token: write
 env:
   Workflow_Level: Workflow
 jobs:
   Scan:
     runs-on: ubuntu-latest
+    permissions:
+     content: write
+      
     steps:
       - run: exit 1
         
