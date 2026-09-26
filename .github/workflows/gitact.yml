@@ -1,0 +1,22 @@
+name: Testing_Actions
+on:
+  workflow_dispatch:
+jobs:
+  setup:
+    runs-on: ubuntu-24.04
+    env:
+      node-version: "8.x"
+      dotnet-version: "10.x"
+      python-version: "7.x"
+    steps:
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{env.node-version}}
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{env.dotent-version}}
+       uses: actions/setup-python@v4
+      with:
+        python-version: ${{env.python-version}}
+      
+    
