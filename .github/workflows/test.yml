@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
-        continue-on-error: true
+        
       - name: FailureTest
         if: failure()
         run: print ("Hello From Python")
