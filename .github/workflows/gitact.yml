@@ -49,7 +49,7 @@ jobs:
           path: ./mayur
     
       - name: check file
-        run: cat /mayur/output.txt
+        run: cat ./mayur/output.txt
   
   
           
