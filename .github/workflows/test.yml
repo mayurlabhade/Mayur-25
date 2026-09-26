@@ -8,9 +8,10 @@ jobs:
   Scan:
     runs-on: ubuntu-latest
     steps:
-      - run: exit 1
+      - run: echo "Hello From Bash"
         continue-on-error: true
       - run: print ("Hello From Python")
+        if: failure()
         shell: python
       - uses: actions/setup-dotnet@v4
         with:
