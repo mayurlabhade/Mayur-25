@@ -1,0 +1,12 @@
+{
+  "name": "mayur-25",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test project for GitHub Actions cache",
+  "scripts": {
+    "test": "echo \"No tests configured\""
+  },
+  "dependencies": {
+    "lodash": "^4.17.16"
+  }
+}
