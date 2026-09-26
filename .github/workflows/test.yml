@@ -8,7 +8,7 @@ jobs:
   Scan:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello From Bash"
+      - run: exit 1
         continue-on-error: true
       - run: print ("Hello From Python")
         if: failure()
