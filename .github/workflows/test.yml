@@ -40,6 +40,7 @@ jobs:
           echo "$Workflow_Level"
           echo "$Job_Level"
           echo "${{env.Step_Level}}"
+          sleep 500s
       - name: Dyna-En-vari
         run: echo "Dyn_name=MayurAshokLabhade" >> $GITHUB_ENV
       - run: echo "Name is ${{env.Dyn_name}}"
