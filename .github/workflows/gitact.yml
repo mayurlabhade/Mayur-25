@@ -28,18 +28,12 @@ jobs:
 
       # Create a 100-line test file
       - name: Create test artifact file
-        run: |
-          python3 << 'EOF'
-          with open('test-artifact.txt', 'w') as f:
-              for i in range(1, 101):
-                  f.write(f"Line {i}: This is a test line for artifact upload.\n")
-          print("✓ Created test-artifact.txt with 100 lines")
-          EOF
+        run: echo "Hello My NAme is Mayur Ashok Labhsajycgy yugfihfgsj ghsfhoihh hbsuvibvhjbhu ylisgifdhbiv" > output.txt
 
       # Upload artifact
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-artifact
-          path: test-artifact.txt
+          path: output.txt
           retention-days: 30
