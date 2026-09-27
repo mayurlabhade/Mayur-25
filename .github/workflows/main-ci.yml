@@ -11,4 +11,4 @@ jobs:
       Name: 'Mayur Ashok Labhade'
       Age: '28'
     secrets:
-      REPO_NAME: ${{ secrets.REPO_NAME}}
+      Sakshi: ${{ secrets.REPO_NAME}}
