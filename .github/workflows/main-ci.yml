@@ -2,15 +2,13 @@ name: Main CI Pipeline
 
 on:
   push:
-    branches: [ "main", "dev" ]
-  pull_request:
-    branches: [ "main" ]
-
+    branches: [main ]
+  
 jobs:
   call-reusable-build:
     uses: ./.github/workflows/reusable-build.yml
     with:
-      dotnet-version: '8.0.x'
-      environment-name: 'Development'
+      Name: 'Mayur Ashok Labhade'
+      Age: '28'
     secrets:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      REPO_NAME: ${{ secrets.REPO_NAME}}
